@@ -1,0 +1,92 @@
+body {
+    background-color: bisque;
+    margin: 0%;
+    font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+}
+
+nav {
+    background-color: rgb(226, 198, 164);
+    height: 50px;
+    font-size: 180%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+article {
+    background-color: rgb(255, 245, 230);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+b {
+    background-color: rgb(231, 217, 196);
+    padding: 5px;
+    padding-right: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.137);
+}
+
+.epic {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    /* font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; */
+    line-height: 1;
+ }
+
+ .epic .letter {
+    display: inline-block;
+    transform-origin: center;
+    /* moving (float) + rainbow background animation (two animations) */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: float 1.1s ease-in-out var(--move-delay, 0s) infinite alternate,
+    rainbow 3s linear var(--color-delay, 0s) infinite;
+}
+
+/* Staggered delays per letter */
+.epic .letter:nth-child(1) {
+    --move-delay: 0s;
+    --color-delay: 0s;
+}
+.epic .letter:nth-child(2) {
+    --move-delay: 0.08s;
+    --color-delay: 0.15s;
+}
+.epic .letter:nth-child(3) {
+    --move-delay: 0.16s;
+    --color-delay: 0.3s;
+}
+.epic .letter:nth-child(4) {
+    --move-delay: 0.24s;
+    --color-delay: 0.45s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
