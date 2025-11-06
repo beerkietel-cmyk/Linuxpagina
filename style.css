@@ -16,6 +16,7 @@ nav {
     text-overflow: ellipsis;
 }
 
+/* Css for the articles !! */
 article {
     background-color: rgb(255, 245, 230);
     margin: 10px;
@@ -24,6 +25,7 @@ article {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* background style !!11!! */
 b {
     background-color: rgb(231, 217, 196);
     padding: 5px;
